@@ -1,4 +1,37 @@
-h{
-    background-color: aqua;
+*{
+    margin: 0 auto;
+}
+.moon{
+    background:black;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    position: relative;
+    border: 50%;
+}
+.moon::before{
+    content: "";
+    background-color: #ffff;
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    z-index: 1;
+    animation: 3.2s  animetion linear infinite  alternate;
+}
+@keyframes animetion{
+    0%{
+        transform: translateX(40px) scale(0.9);
+        box-shadow: none;
+    }
+    50%{
+        transform: translateX(0px,0px) scale(1.02);
+        box-shadow: 0 0 10px #ffff,0 0 80px 2px #ffff;
+    }
     
+    100%{
+        transform: translateX(-40px) scale(0.9);
+        box-shadow: none;
+    } 
 }
